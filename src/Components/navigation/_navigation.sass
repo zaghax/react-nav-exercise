@@ -1,0 +1,143 @@
+.navbar-menu
+    width: 70%
+    position: absolute
+    top: 100%
+    left: -100%
+    visibility: hidden
+    opacity: 0
+    transition: all 350ms ease-in-out
+    &.active
+        visibility: visible
+        opacity: 1
+        left: 0
+
+.menu,
+.submenu
+    padding: 0
+    margin: 0
+    list-style: none
+
+.menu
+    width: 100%
+    height: calc(100vh - 72px)
+    display: flex
+    flex-flow: row wrap
+    background-color: $white
+    overflow-y: scroll
+    &__item
+        text-align: center
+        position: relative
+        width: 100%
+    &__group
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__link
+        background: transparent
+        color: $black
+        text-align: left
+    &__submenucta
+        padding: 0 20px
+        &:after
+            content: "\F078"
+            font-family: $fa
+            font-size: 16px
+            font-style: normal
+            margin-left: 5px
+            display: inline-block
+            transition: all .2s ease-in-out
+
+    &__link,
+    .submenu__link
+        font-size: 24px
+        padding: 24px
+        display: block
+        text-decoration: none
+        line-height: 1
+        transition: all 300ms ease-in-out
+
+    .submenu
+        width: 100%
+        background: $white
+        max-height: 0
+        visibility: hidden
+        opacity: 0
+        overflow: hidden
+        transition: all 300ms ease-in-out
+
+    .menu__submenucta
+        &__link
+            background: $white
+            color: $black
+            text-align: left
+
+    &__item
+        &.active
+            .submenu
+                max-height: 600px
+                visibility: visible
+                opacity: 1
+            .menu__submenucta
+                &:after
+                    transform: rotateX(180deg)
+
++breakpoint($desktop)
+    .navbar-menu
+        width: 100%
+        position: relative
+        top: auto
+        left: auto
+        max-height: 72px
+        visibility: visible
+        opacity: 1
+    .menu
+        flex-flow: row wrap
+        height: auto
+        background-color: transparent
+        overflow-y: inherit
+        &__link
+            background: transparent
+            color: $white
+            text-align: center
+            position: relative
+
+        &__submenucta
+            padding: 0
+            position: absolute
+            right: 15px
+            color: $white
+            &:after
+                vertical-align: middle
+
+        &__item
+            width: auto
+            &:hover
+                .menu
+                    &__link
+                        background-color: $white
+                        color: $mainColor
+
+                    &__submenucta
+                        color: $mainColor
+                        &:after
+                            transform: rotateX(180deg)
+                .submenu
+                    max-height: 600px
+                    visibility: visible
+                    opacity: 1
+            &.hasSubMenu
+                .menu__link
+                    padding-right: 40px
+
+        .submenu
+            width: 200%
+            position: absolute
+            top: 100%
+            .submenu__link
+                &:hover
+                    background-color: $grayColor
+
+
+
+
+

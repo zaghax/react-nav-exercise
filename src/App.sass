@@ -1,0 +1,72 @@
+@import '../node_modules/breakpoint-sass/stylesheets/_breakpoint'
+@import './_variables'
+@import './Components/navigation/_navigation'
+@import './Components/banner/_banner'
+@import './Components/content/_content'
+
+body
+    background-color: $white
+    margin: 0
+    padding: 0
+    &.noScroll
+        overflow: hidden
+
+.header
+    display: flex
+    width: 100%
+    align-items: center
+    background: $mainColor
+    position: relative
+    justify-content: space-between
+    &.fixed
+        position: fixed
+
+.logo
+    font-size: 24px
+    font-weight: bold
+    padding: 24px 48px 24px
+    line-height: 1
+    color: $white
+
+.hamburguer
+    width: 35px
+    height: 27px
+    position: relative
+    margin: 10px
+    transition: all 250ms ease-in-out
+    &__line
+        width: 100%
+        height: 4px
+        left: 50%
+        transform: translate(-50%, 0)
+        display: block
+        background: $white
+        position: absolute
+        transition: all 250ms ease-in-out
+
+    .line
+        &--top
+            top: 0
+        &--middle
+            top: 50%
+            transform: translate(-50% , -50%)
+        &--bottom
+            bottom: 0%
+
+    &.active
+        transform: rotate(180deg)
+        .line
+            &--top
+                top: 50%
+                transform: translate(-50% , -50%) rotate(45deg)
+            &--middle
+                opacity: 0
+            &--bottom
+                bottom: 50%
+                transform: translate(-50% , 50%) rotate(-45deg)
+
++breakpoint($desktop)
+    .header
+        justify-content: initial
+
+

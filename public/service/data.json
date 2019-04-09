@@ -1,0 +1,89 @@
+{
+    "menu": [
+        {
+            "name": "Item 1"
+        },
+        {
+            "name": "Item 2"
+        },
+        {
+            "name": "Item 3",
+            "submenu": [
+                {
+                    "name": "SubItem 1"
+                },
+                {
+                    "name": "SubItem 2"
+                },
+                {
+                    "name": "SubItem 3"
+                }
+            ]
+        },
+        {
+            "name": "Item 4"
+        },
+        {
+            "name": "Item 5"
+        },
+        {
+            "name": "Item 6",
+            "submenu": [
+                {
+                    "name": "SubItem 1"
+                },
+                {
+                    "name": "SubItem 2"
+                },
+                {
+                    "name": "SubItem 3"
+                },
+                {
+                    "name": "SubItem 4"
+                },
+                {
+                    "name": "SubItem 5"
+                }
+            ]
+        },
+        {
+            "name": "Item 7",
+            "submenu": [
+                {
+                    "name": "SubItem 1"
+                },
+                {
+                    "name": "SubItem 2"
+                },
+                {
+                    "name": "SubItem 3"
+                },
+                {
+                    "name": "SubItem 4"
+                },
+                {
+                    "name": "SubItem 5"
+                },
+                {
+                    "name": "SubItem 6"
+                },
+                {
+                    "name": "SubItem 7"
+                },
+                {
+                    "name": "SubItem 8"
+                }
+            ]
+        },
+        {
+            "name": "Item 8"
+        }
+    ],
+    "banner": {
+            "url": "https://via.placeholder.com/1920x500",
+            "bannerTitle": "This is the main banner text"
+    },
+    "content": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut venenatis dolor vel turpis tempor pulvinar. Nam ac urna risus. Integer ante sapien, sodales eu suscipit placerat, hendrerit scelerisque lorem. Integer et felis efficitur, consequat tortor at, condimentum massa. Cras finibus in massa ac venenatis. Nam at metus ac elit faucibus cursus. Proin quis nisl felis. Sed turpis nibh, bibendum sit amet suscipit id, pellentesque a odio. Vestibulum lobortis tortor sit amet velit vestibulum, id pharetra ex sodales. Nullam suscipit ligula diam, ac suscipit metus posuere non."
+    }
+}
